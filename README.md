@@ -7,5 +7,6 @@ NCryptライブラリのテストプロジェクトです。
 - Google Test
 
 ## 関数情報
+- [NCryptCreatePersistedKey 関数](https://learn.microsoft.com/ja-jp/windows/win32/api/ncrypt/nf-ncrypt-ncryptcreatepersistedkey)
 - [NCryptFreeObject 関数](https://learn.microsoft.com/ja-jp/windows/win32/api/ncrypt/nf-ncrypt-ncryptfreeobject)
 - [NCryptOpenStorageProvider 関数](https://learn.microsoft.com/ja-jp/windows/win32/api/ncrypt/nf-ncrypt-ncryptopenstorageprovider)
