@@ -8,5 +8,6 @@ namespace unittest
 		SECURITY_STATUS actual = NCryptOpenStorageProvider(&hProvider, MS_KEY_STORAGE_PROVIDER, 0);
 
 		ASSERT_EQ(ERROR_SUCCESS, actual);
+		ASSERT_EQ(ERROR_SUCCESS, NCryptFreeObject(hProvider));
 	}
 }
