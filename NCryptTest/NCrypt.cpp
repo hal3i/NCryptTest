@@ -27,6 +27,13 @@ SECURITY_STATUS NCrypt::DeleteKey(LPCWSTR pxzKeyName, DWORD dwFlags)
 	return NCryptFreeBuffer(pEnumState);
 }
 
+SECURITY_STATUS NCrypt::ExportKey(NCRYPT_KEY_HANDLE hKey, NCRYPT_KEY_HANDLE hExportKey, LPCWSTR pszBlobType, NCryptBufferDesc *pParameterList, PBYTE pbOutput, DWORD cbOutput, DWORD *pcbResult, DWORD dwFlags)
+{
+	SECURITY_STATUS status = NCryptExportKey(hKey, hExportKey, pszBlobType, pParameterList, pbOutput, cbOutput, pcbResult, dwFlags);
+
+	return status;
+}
+
 SECURITY_STATUS NCrypt::FinalizeKey(NCRYPT_KEY_HANDLE hKey, DWORD dwFlags)
 {
 	return NCryptFinalizeKey(hKey, dwFlags);

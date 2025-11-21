@@ -5,6 +5,7 @@ class NCrypt
 public:
 	SECURITY_STATUS CreatePersistedKey(NCRYPT_KEY_HANDLE* phKey, LPCWSTR pszAlgId, LPCWSTR pszKeyName, DWORD dwLegacyKeySpec, DWORD dwFlags);
 	SECURITY_STATUS DeleteKey(LPCWSTR pxzKeyName, DWORD dwFlags);
+	SECURITY_STATUS ExportKey(NCRYPT_KEY_HANDLE hKey, NCRYPT_KEY_HANDLE hExportKey, LPCWSTR pszBlobType, NCryptBufferDesc* pParameterList, PBYTE pbOutput, DWORD cbOutput, DWORD* pcbResult, DWORD dwFlags);
 	SECURITY_STATUS FinalizeKey(NCRYPT_KEY_HANDLE hKey, DWORD dwFlags);
 	SECURITY_STATUS FreeBuffer(PVOID pvInput);
 	SECURITY_STATUS FreeObject(NCRYPT_HANDLE hObject);
